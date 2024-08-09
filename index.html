@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Exam Practice - English</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mock Exam Practice - English</h1>
+            <div id="schoolName">Pharez Oxfords Academy</div>
+            <div id="teacherInfo">
+                <img src="Images/Duke1.png" alt="Teacher's Picture" id="teacherPic">
+                <div id="teacherName">Instructor Toby</div>
+            </div>
+            <div id="timer">20:00</div>
+        </header>
+        <main>
+            <form id="quizForm">
+                <section id="login">
+                    <h2>Login</h2>
+                    <div>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="button" id="startBtn">Start Exam</button>
+                </section>
+                <section id="english" class="hidden">
+                    <h2>English</h2>
+
+                    <!-- Example structure for questions -->
+
+                    <div class="question">
+                        <p>1. Choose the correct word to complete the sentence: "The cat _____ on the mat."</p>
+                        <div class="options">
+                            <label><input type="radio" name="eng1" value="A"> A. lay</label>
+                            <label><input type="radio" name="eng1" value="B"> B. lies</label>
+                            <label><input type="radio" name="eng1" value="C"> C. laid</label>
+                            <label><input type="radio" name="eng1" value="D"> D. lain</label>
+                        </div>
+                    </div>
+
+
+                    <div class="question">
+                        <p>1. Choose the correct word to complete the sentence: "The cat _____ on the mat."</p>
+                        <div class="options">
+                            <label><input type="radio" name="eng1" value="A"> A. lay</label>
+                            <label><input type="radio" name="eng1" value="B" class="correct"> B. lies</label>
+                            <label><input type="radio" name="eng1" value="C"> C. laid</label>
+                            <label><input type="radio" name="eng1" value="D"> D. lain</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>2. Identify the synonym of the word "benevolent".</p>
+                        <div class="options">
+                            <label><input type="radio" name="eng2" value="A"> A. cruel</label>
+                            <label><input type="radio" name="eng2" value="B"> B. kind</label>
+                            <label><input type="radio" name="eng2" value="C" class="correct"> C. charitable</label>
+                            <label><input type="radio" name="eng2" value="D"> D. selfish</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>3. What is the main idea of the passage?</p>
+                        <div class="options">
+                            <label><input type="radio" name="eng3" value="A" class="correct"> A. The main idea is ...</label>
+                            <label><input type="radio" name="eng3" value="B"> B. Another possible main idea...</label>
+                            <label><input type="radio" name="eng3" value="C"> C. Yet another possible main idea...</label>
+                            <label><input type="radio" name="eng3" value="D"> D. A different main idea...</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>4. Which sentence is correctly punctuated?</p>
+                        <div class="options">
+                            <label><input type="radio" name="eng4" value="A"> A. The quick, brown fox jumps over the lazy dog.</label>
+                            <label><input type="radio" name="eng4" value="B"> B. The quick brown fox jumps over the lazy dog.</label>
+                            <label><input type="radio" name="eng4" value="C" class="correct"> C. The quick, brown fox, jumps over the lazy dog.</label>
+                            <label><input type="radio" name="eng4" value="D"> D. The quick brown, fox jumps over the lazy dog.</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>5. Identify the figure of speech in the sentence: "The wind whispered through the trees."</p>
+                        <div class="options">
+                            <label><input type="radio" name="eng5" value="A"> A. Simile</label>
+                            <label><input type="radio" name="eng5" value="B"> B. Metaphor</label>
+                            <label><input type="radio" name="eng5" value="C"> C. Hyperbole</label>
+                            <label><input type="radio" name="eng5" value="D" class="correct"> D. Personification</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>6. Choose the word that is most nearly opposite in meaning to the word "garrulous".</p>
+                        <div class="options">
+                            <label><input type="radio" name="eng6" value="A"> A. Quiet</label>
+                            <label><input type="radio" name="eng6" value="B" class="correct"> B. Silent</label>
+                            <label><input type="radio" name="eng6" value="C"> C. Noisy</label>
+                            <label><input type="radio" name="eng6" value="D"> D. Talkative</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>7. What is the best title for the passage?</p>
+                        <div class="options">
+                            <label><input type="radio" name="eng7" value="A" class="correct"> A. The best title is ...</label>
+                            <label><input type="radio" name="eng7" value="B"> B. Another possible title...</label>
+                            <label><input type="radio" name="eng7" value="C"> C. Yet another possible title...</label>
+                            <label><input type="radio" name="eng7" value="D"> D. A different title...</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>8. Which sentence contains a gerund?</p>
+                        <div class="options">
+                            <label><input type="radio" name="eng8" value="A"> A. She enjoys swimming in the lake.</label>
+                            <label><input type="radio" name="eng8" value="B" class="correct"> B. He was running late for work.</label>
+                            <label><input type="radio" name="eng8" value="C"> C. They are going to the market.</label>
+                            <label><input type="radio" name="eng8" value="D"> D. The dog barked loudly.</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>9. What is the passive voice form of the sentence: "The chef prepares the meal."?</p>
+                        <div class="options">
+                            <label><input type="radio" name="eng9" value="A" class="correct"> A. The meal is prepared by the chef.</label>
+                            <label><input type="radio" name="eng9" value="B"> B. The meal was prepared by the chef.</label>
+                            <label><input type="radio" name="eng9" value="C"> C. The meal has been prepared by the chef.</label>
+                            <label><input type="radio" name="eng9" value="D"> D. The meal will be prepared by the chef.</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>10. Which of the following sentences is a compound sentence?</p>
+                        <div class="options">
+                            <label><input type="radio" name="eng10" value="A"> A. She went to the store, and she bought some milk.</label>
+                            <label><input type="radio" name="eng10" value="B" class="correct"> B. Although she was tired, she went to the store.</label>
+                            <label><input type="radio" name="eng10" value="C"> C. The store was closed because it was late.</label>
+                            <label><input type="radio" name="eng10" value="D"> D. She went to the store after she finished her work.</label>
+                        </div>
+                    </div>
+
+                    <!-- Repeat similar structure for questions 11 to 50 -->
+
+                </section>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
+
+
+                    <!-- Repeat similar structure for questions 2 to 50 -->
+
+                    <button type="button" id="submitBtn">Submit</button>
+                </section>
+            </form>
+        </main>
+        <footer>
+            <p>Made with <i class="fas fa-heart"></i> by Toby 2024</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

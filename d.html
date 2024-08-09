@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Exam Practice - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Greenwood High School - Mock Exams</h1>
+            <div id="teacherInfo">
+                <img src="teacher.jpg" alt="Teacher's Picture" id="teacherPic">
+                <div id="teacherName">Ms. Smith</div>
+            </div>
+        </header>
+        <main>
+            <section id="login">
+                <h2>Login</h2>
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="button" id="startBtn">Start Exam</button>
+            </section>
+            
+            <section id="subjects" class="hidden">
+                <h2>Choose a Subject</h2>
+                <div class="subjects-grid">
+                    <div class="subject-box" data-subject="english">English</div>
+                    <div class="subject-box" data-subject="math">Mathematics</div>
+                    <div class="subject-box" data-subject="science">General Science</div>
+                    <div class="subject-box" data-subject="computer">Computer Science</div>
+                    <!-- Add more subject boxes if needed -->
+                </div>
+            </section>
+            
+            <section id="questions" class="hidden">
+                <div id="timer">50:00</div>
+                <form id="quizForm">
+                    <div id="english" class="subject-questions hidden">
+                        <h2>English</h2>
+                        <div class="question">
+                            <p>1. Choose the correct word to complete the sentence: "The cat _____ on the mat."</p>
+                            <div class="options">
+                                <label><input type="radio" name="eng1" value="A"> A. lay</label>
+                                <label><input type="radio" name="eng1" value="B"> B. lies</label>
+                                <label><input type="radio" name="eng1" value="C"> C. laid</label>
+                                <label><input type="radio" name="eng1" value="D"> D. lain</label>
+                            </div>
+                        </div>
+                        <!-- Add more questions for English -->
+                    </div>
+                    
+                    <div id="math" class="subject-questions hidden">
+                        <h2>Mathematics</h2>
+                        <div class="question">
+                            <p>1. What is 7 + 8?</p>
+                            <div class="options">
+                                <label><input type="radio" name="math1" value="A"> A. 13</label>
+                                <label><input type="radio" name="math1" value="B"> B. 14</label>
+                                <label><input type="radio" name="math1" value="C"> C. 15</label>
+                                <label><input type="radio" name="math1" value="D"> D. 16</label>
+                            </div>
+                        </div>
+                        <!-- Add more questions for Mathematics -->
+                    </div>
+                    
+                    <div id="science" class="subject-questions hidden">
+                        <h2>General Science</h2>
+                        <div class="question">
+                            <p>1. What is the chemical symbol for water?</p>
+                            <div class="options">
+                                <label><input type="radio" name="science1" value="A"> A. O₂</label>
+                                <label><input type="radio" name="science1" value="B"> B. H₂O</label>
+                                <label><input type="radio" name="science1" value="C"> C. CO₂</label>
+                                <label><input type="radio" name="science1" value="D"> D. H₂</label>
+                            </div>
+                        </div>
+                        <!-- Add more questions for General Science -->
+                    </div>
+                    
+                    <div id="computer" class="subject-questions hidden">
+                        <h2>Computer Science</h2>
+                        <div class="question">
+                            <p>1. What does HTML stand for?</p>
+                            <div class="options">
+                                <label><input type="radio" name="computer1" value="A"> A. Hyper Text Markup Language</label>
+                                <label><input type="radio" name="computer1" value="B"> B. Home Tool Markup Language</label>
+                                <label><input type="radio" name="computer1" value="C"> C. Hyperlink Text Markup Language</label>
+                                <label><input type="radio" name="computer1" value="D"> D. Hyperlink and Text Markup Language</label>
+                            </div>
+                        </div>
+                        <!-- Add more questions for Computer Science -->
+                    </div>
+                    
+                    <button type="button" id="submitBtn">Submit</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>Made with <i class="fas fa-heart"></i> by Toby 2024</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script
